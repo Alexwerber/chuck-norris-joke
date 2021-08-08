@@ -5,6 +5,7 @@ import dagger.MapKey
 import dagger.Module
 import dagger.Provides
 import dagger.multibindings.IntoMap
+import xaa.werber.chuck_norris_joke.data.repotisory.JokeRepository
 import xaa.werber.chuck_norris_joke.viewmodel.JokeViewModel
 import xaa.werber.chuck_norris_joke.viewmodel.ViewModelFactory
 import javax.inject.Provider
@@ -24,5 +25,5 @@ class ViewModelModule {
     @Provides
     @IntoMap
     @ViewModelKey(JokeViewModel::class)
-    fun provideJokeViewModel(): JokeViewModel = JokeViewModel()
+    fun provideJokeViewModel(jokeRepository: JokeRepository): JokeViewModel = JokeViewModel(jokeRepository)
 }
