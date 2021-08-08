@@ -1,3 +1,10 @@
 <resources>
+    <!-- main activity -->
     <string name="app_name">chuck-norris-joke</string>
+    <string name="text_label_joke">Joke</string>
+    <string name="text_label_web">Web</string>
+
+    <!-- joke list fragment -->
+    <string name="load_button">RELOAD</string>
+    <string name="count_input">Count</string>
 </resources>
