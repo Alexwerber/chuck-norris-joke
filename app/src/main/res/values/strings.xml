@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">chuck-norris-joke</string>
+    <string name="text_label_joke">Joke</string>
+    <string name="text_label_web">Web</string>
 </resources>
