@@ -36,6 +36,12 @@ class JokeListFragment: Fragment(R.layout.fragment_joke_list) {
         viewModel.getJokeList().observe(this, {
             adapter.setData(it)
         })
+
+        load_button.setOnClickListener() {
+            count_input.text.toString().toIntOrNull()?.let {
+                viewModel.getJokeFromNetwork(it)
+            }
+        }
     }
 
 }
