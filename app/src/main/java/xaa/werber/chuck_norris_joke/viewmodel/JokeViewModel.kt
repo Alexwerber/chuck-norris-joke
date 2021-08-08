@@ -15,6 +15,6 @@ class JokeViewModel(private val repository: JokeRepository): ViewModel() {
     fun getJokeList(): MutableLiveData<List<Joke>> = jokeList
 
     fun getJokeFromNetwork(number: Int) {
-        repository.loadJokeFromNetwork()
+        repository.loadJokeFromNetwork(number)
     }
 }
