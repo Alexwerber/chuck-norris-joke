@@ -25,21 +25,23 @@ class MainActivity : AppCompatActivity(), HasAndroidInjector {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        bottom_navigation.setOnNavigationItemReselectedListener {
-            Log.i("wwwww", it.itemId.toString())
+        bottom_navigation.setOnItemSelectedListener {
             when(it.itemId) {
                 R.id.jokes_page -> goToJokePage()
                 R.id.web_page -> goToWebPage()
+                else -> false
             }
         }
     }
 
-    private fun goToJokePage() {
+    private fun goToJokePage(): Boolean {
         this.supportFragmentManager.beginTransaction().replace(R.id.fragment_container, JokeListFragment()).commit()
+        return true
     }
 
-    private fun goToWebPage() {
+    private fun goToWebPage(): Boolean {
         this.supportFragmentManager.beginTransaction().replace(R.id.fragment_container, WebFragment()).commit()
+        return true
     }
 
 }
