@@ -25,5 +25,5 @@ class ViewModelModule {
     @Provides
     @IntoMap
     @ViewModelKey(JokeViewModel::class)
-    fun provideJokeViewModel(jokeRepository: JokeRepository): JokeViewModel = JokeViewModel(jokeRepository)
+    fun provideJokeViewModel(jokeRepository: JokeRepository): ViewModel = JokeViewModel(jokeRepository)
 }

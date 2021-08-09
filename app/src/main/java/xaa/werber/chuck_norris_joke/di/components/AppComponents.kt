@@ -12,11 +12,11 @@ import xaa.werber.chuck_norris_joke.di.modules.ViewModelModule
 import javax.inject.Singleton
 
 @Component(modules = [
+    ViewModelModule::class,
     AndroidInjectionModule::class,
     ActivityBuilderModule::class,
     RepositoryModule::class,
     RetrofitModule::class,
-    ViewModelModule::class
 ])
 @Singleton
 interface AppComponents {
@@ -27,5 +27,5 @@ interface AppComponents {
         fun build(): AppComponents
     }
 
-    fun inject(app: JokeApp)
+    fun inject(jokeApp: JokeApp)
 }

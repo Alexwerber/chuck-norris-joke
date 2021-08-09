@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
+import dagger.android.support.AndroidSupportInjection
 import kotlinx.android.synthetic.main.fragment_joke_list.*
 import xaa.werber.chuck_norris_joke.R
 import xaa.werber.chuck_norris_joke.ui.adapters.JokeListAdapter
@@ -20,13 +21,14 @@ class JokeListFragment: Fragment(R.layout.fragment_joke_list) {
     private val adapter = JokeListAdapter()
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        AndroidSupportInjection.inject(this)
         super.onCreate(savedInstanceState)
-
-        activity?.let { viewModel = ViewModelProvider(this, viewModelFactory).get(JokeViewModel::class.java)}
     }
 
     override fun onStart() {
         super.onStart()
+
+        activity?.let { viewModel = ViewModelProvider(this, viewModelFactory).get(JokeViewModel::class.java)}
 
         joke_recycler_view.apply {
             layoutManager = LinearLayoutManager(activity)
