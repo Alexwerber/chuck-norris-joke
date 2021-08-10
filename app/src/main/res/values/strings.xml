@@ -3,6 +3,8 @@
     <string name="app_name">chuck-norris-joke</string>
     <string name="text_label_joke">Joke</string>
     <string name="text_label_web">Web</string>
+    <string name="joke_title">Jokes</string>
+    <string name="web_title">Api info</string>
 
     <!-- joke list fragment -->
     <string name="load_button">RELOAD</string>

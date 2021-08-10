@@ -23,6 +23,7 @@ class JokeListFragment: Fragment(R.layout.fragment_joke_list) {
     override fun onCreate(savedInstanceState: Bundle?) {
         AndroidSupportInjection.inject(this)
         super.onCreate(savedInstanceState)
+        activity?.let { it.title = resources.getString(R.string.joke_title) }
     }
 
     override fun onStart() {
