@@ -15,4 +15,4 @@
 
 Второй экран представляет собой браузер с загруженной ссылкой. В котором представленна информация по использованному API:
 
-<img src="screenshots/web_page.jpg" width=250">
+<img src="screenshots/web_page.jpg" width="250">
